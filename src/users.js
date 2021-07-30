@@ -1,12 +1,3 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import "./index.css";
-import App from "./App";
-
-import "./App.css";
-
-//import usersInfo from "./users";
-
 const userInformation = [
   {
     id: 1,
@@ -45,13 +36,4 @@ const userInformation = [
   }
 ];
 
-ReactDOM.render(
-  <App users={userInformation}></App>,
-
-  document.getElementById("root")
-);
-
-/**
- *
- * KISS : keep it simple and stupid
- */
+export default userInformation;

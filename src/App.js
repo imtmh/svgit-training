@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import ConditionalRenderingComponent from "./ConditioanalRendering";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default function App({ users }) {
+  return users.map((singleUser, index) => {
+    return <ConditionalRenderingComponent isStudent={singleUser.isStudent} name={singleUser.name} id={singleUser.id} />;
+  });
+
+  // let usersComponent = [];
+
+  // for (let singleUser of users) {
+  //   usersComponent.push(<ConditionalRenderingComponent isStudent={singleUser.isStudent} name={singleUser.name} id={singleUser.id} />);
+  // }
+
+  // return usersComponent;
 }
 
-export default App;
+/**
+ * map, reduce and filter
+ */
